@@ -52,7 +52,7 @@ module Calais
 
     def process_document(*args, &block)
       client = Client.new(*args, &block)
-      client.output_format = :rdf
+      client.output_format = :json
       Response.new(client.enlighten)
     end
   end
